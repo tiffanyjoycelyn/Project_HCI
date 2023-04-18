@@ -1,84 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-:root{
-  --primary: #CF6024;
-  --primary-dark: #c20376;
-  --secondary: #4667A4;
-  --secondary-dark:#4667A4;
-  --black:#000000;
-
-}
-
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: content-box;
-    font-family: 'Open Sans', sans-serif;
-    color: #000000;
+    padding: 0;
 }
+
 body{
-    margin: 5px;
-    background: white
-}
+    font-family: "Roboto", sans-serif;
 
-.nav{
-    background-color: whitesmoke;
-    height: 80px;
-    display: flex;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
-#nav-bar{
-    height: 70px;
-    display: flex;
-}
-.nav-bar-item-logo{
-    padding: 0 10px 2px 10px;
-    display: flex;
-    margin-right: 30px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: .5s;
-  
-}
-.nav-bar-items{
-    display: flex;
-    text-decoration:none;
-    margin-right: 70px;
-    transition: .5s;
-    overflow: hidden;
-    position: relative;
-    
-}
-.nav-bar-item-bg{
+header{
     width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    display: flex;
-    position: absolute;
-    background-color: var(--primary);
-    color: white;
-    transform: translateY(75px);
-    transition: .7s;
+    height: 100vh;
+    background-color: beige;
 
 }
-.nav-bar-items:hover .nav-bar-item-bg{
-    transform: translateY(0px);
-    transition: .5s;
+
+nav,.navigationBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.navigationBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brandName{
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5em;
+    padding: 15px;
+}
+.brandName-firstName{
+    color: white;
+    font-weight: 700;
+    
+}
+.brandName-dash{
+    color: bisque;
+    font-weight: 200;
+}
+.brandName-lastName{
+    color: aqua;
+    font-weight: 1000;
+    padding-left: 3px;
     
 }
 
-.current{
-    transform: translateY(0px);
-    transition: .5s;
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.nav-bar-text{
-    margin: auto 0px;
-    padding: 0 30px 0 30px;
-    position: relative;
-    z-index: 10;
-    color:#000000;
-    font-size: larger;
-    font-weight: bolder;
-    text-align: center;
+.navigation > li{
+    list-style-type: none;
+    padding: 60px;
+}
+
+.navigation > li>a{
+    color: white;
+    font-size: 20px;
+    font-weight: 1000;
+    text-decoration: 0;
+
+}
+.navigation-text-active{
+    background-color: aqua;
+    color: #222;
+    padding: 20px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navigation > li>a:hover{
+   color: beige;
+   transition: all .3s ease-in-out;
+}
+
+.navigation-text-active:hover{
+    color: beige !important; 
 }
