@@ -27,6 +27,7 @@ nav,.navigationBar{
     font-size: 15px;
     padding: 15px;
     width: 100%;
+    position: fixed;
     height: 80px;
     background-color: #222;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
@@ -109,6 +110,53 @@ nav,.navigationBar{
     background-color: white;
 
 }
+main{
+    width: 100em;
+    height: 100em;
+
+}
+
+footer{
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brandName-footer{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    font-size: 2em;
+    padding: 5px;
+}
+.brandName-firstName-footer{
+    color: white;
+    font-weight: 700;
+    
+}
+.brandName-dash-footer{
+    color: bisque;
+    font-weight: 200;
+}
+.brandName-lastName-footer{
+    color: aqua;
+    font-weight: 1000;
+    padding-left: 3px;
+    
+}
+
+.footer-item{
+    color: white;
+    font-weight: 400;
+    padding-bottom: 10px;
+
+}
 
 
 
@@ -117,14 +165,20 @@ nav,.navigationBar{
         font-size: 1.5em;
     }
     .navigation{
-        width: 70%;
+        width: 100%;
     }
 
 }
 
 @media screen and (max-width:576px) {
+    .brandName{
+        font-size: 2em;
+    }
     .hamburger{
         display: block;
+        right: 0;
+        padding-right: 100px;
+        position: fixed;
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
