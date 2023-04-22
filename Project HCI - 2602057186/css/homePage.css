@@ -1,0 +1,108 @@
+.hero-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../Assets/Home/home-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-contents{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brandName-hero{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    font-size: 8em;
+    padding: 10px 70px;
+    border-radius: 70px;
+    /* background-color: #222; */
+    margin-bottom: 20px;
+}
+.brandName-firstName-hero{
+    color: white;
+    font-weight: 700;
+    
+}
+.brandName-dash-hero{
+    color: bisque;
+    font-weight: 200;
+}
+.brandName-lastName-hero{
+    color: aqua;
+    font-weight: 1000;
+    padding-left: 3px;
+    
+}
+
+.slogan-first{
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+.slogan-first span{
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: beige;
+}
+.slogan-second{
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+    .brandName-hero{
+        font-size: 5em;
+    }
+
+    .slogan-first{
+        font-size: 35px;
+    }
+    .slogan-first span{
+        font-size: 35px;
+    }
+    .slogan-second{
+        font-size: 35px;
+    }
+
+
+}
+
+@media screen and (max-width:576px) {
+    .brandName-hero{
+        font-size: 4em;
+    }
+
+    .slogan-first{
+        font-size: 25px;
+    }
+    .slogan-first span{
+        font-size: 25px;
+    }
+    .slogan-second{
+        font-size: 25px;
+    }
+
+}
