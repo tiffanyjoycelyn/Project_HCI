@@ -1,51 +1,92 @@
-let imgPos = 1.0
-$(document).ready(
-    autoWidth()
-)
+$(document).ready(function(){
+  var slides = $('.slides')
+  var curr = 0
+  var prev = 0
 
-function autoWidth(){
-    $(".season-image img").width($(".slider-container").width()+"px")
-    $(".slider-images").css("transform","translateX("+(-$(".season-image img").width() * imgPos)+"px)")
-    $(".slider-images-text").width($(".slider-container").width()+"px")
-    // $(".season-image").height($(".slider-images").height()+"px")
-}
+  for(let i=1;i<slides.length;i++){
+      slides.eq(i).hide();
+  }
 
-$(window).on('resize',autoWidth);
+  $("#slide-right").click(nextImage)
+  $("#slide-left").click(prevImage)
 
-$(".slider-images").css("transform","translateX("+(-$(".season-image img").width() * imgPos)+"px)")
+  setInterval(() => {
+      prev = curr
+      curr++
+      if(curr > slides.length){
+          curr = 0
+      }
+      slides.eq(prev).fadeOut(0)
+      slides.eq(curr).fadeIn(1000)
+  }, 7000);
 
-$("#nextBtn").click(nextImage)
-
-$("#leftBtn").click(prevImage)
-
-function nextImage(){
-    if(imgPos==4){
-        lastImg()
+  function prevImage(){
+    prev = curr
+    curr--
+    if(curr < 0){
+        curr = slides.length - 1
     }
-    imgPos++
-    $(".slider-images").css({"transition":".3s", "transform":"translateX("+(-$(".season-image img").width() * imgPos)+"px)"})
-}
+    slides.eq(prev).fadeOut(0)
+    slides.eq(curr).fadeIn(1000)
+  }
 
-function prevImage(){
-    if(imgPos==1){
-        firstImg()
+  function nextImage(){
+    prev = curr
+    curr++
+    if(curr > slides.length){
+        curr = 0
     }
-    imgPos--
-    $(".slider-images").css({"transition":".3s", "transform":"translateX("+(-$(".season-image img").width() * imgPos)+"px)"})
-}
+    slides.eq(prev).fadeOut(0)
+    slides.eq(curr).fadeIn(1000)
+  }
 
-function firstImg(){
-    imgPos=5
-    $(".slider-images").css({"transition":"none", "transform":"translateX("+(-$(".season-image img").width() * imgPos)+"px)"})
-}
 
-function lastImg(){
-    imgPos = 0
-    $(".slider-images").css({"transition":"none","transform":"translateX("+(-$(".season-image img").width() * imgPos)+"px)"})
-}
-
-function moveSlider(){
-    setInterval(nextImage,3000)
-}
-
-moveSlider()
+})
+   
+  const validateForm = () => {
+    const formButton = document.getElementById("register-button")
+  
+    formButton.addEventListener("click", (e) => {
+      e.preventDefault();
+  
+      const username = document.getElementById("username").value
+      const password = document.getElementById("password").value
+      const passwordConfirm = document.getElementById("password-confirmation").value
+      const fullName = document.getElementById("full-name").value
+      const maleGender = document.getElementById("maleGender").checked
+      const femaleGender = document.getElementById("femaleGender").checked
+      const email = document.getElementById("email").value
+      const age = document.getElementById("age").value
+      const agree = document.getElementById("agree")
+      const error = document.getElementById("error");
+  
+      error.innerText = ""
+  
+      console.log(maleGender)
+      console.log(femaleGender)
+  
+      if (username === "") {
+        error.innerText = "Username must not be empty"
+      } else if (password === "" || password.length < 5) {
+        error.innerText = "Password must not be empty and length must be greater than 5"
+      } else if (password !== passwordConfirm) {
+        error.innerText = "Password must match the password confirmation"
+      } else if (fullName == "") {
+        error.innerText = "Fullname must not be empty"
+      } else if (maleGender === false && femaleGender === false) {
+        error.innerText = "Gender must be chosen"
+      } else if (email === "" || !email.endsWith(".com")) {
+        error.innerText = "Email not be empty and must ended with '.com' (without quote)"
+      } else if (age === "" | Number.parseInt(age) < 16) {
+        error.innerText = "Age must not be empty and must be greater than 16"
+      } else if (!agree.checked) {
+        error.innerText = "You must agree to our terms and conditions"
+      } else {
+        error.style.color = "green"
+        error.innerText = "Register Success!"
+      }
+    })
+  }
+  
+  runSlider()
+  validateForm()
