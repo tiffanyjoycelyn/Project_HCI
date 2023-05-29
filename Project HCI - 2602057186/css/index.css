@@ -3,12 +3,6 @@
     padding: 0;
 }
 
-body{
-    font-family: "Roboto", sans-serif;
-    min-height: 3000px;
-    background-color: rgb(244, 244, 244);
-}
-
 header{
     width: 100%;
     height: 100%;
