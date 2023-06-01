@@ -1,5 +1,73 @@
 body {
   font-family: "Roboto", sans-serif;
   min-height: 2500px;
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(255, 255, 255);
+}
+
+.error-message {
+  display: block;
+  color: red;
+}
+
+.register-section {
+  margin-top: 150px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.register-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #0f3272;;
+}
+
+form {
+  border: 1px solid #E5E5E5;
+  background-color: rgb(255, 255, 255);
+  padding: 1.25rem;
+  border-radius: 0.4rem;
+}
+
+form label {
+  display: block;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="password"],
+form .form-group input[type="number"] {
+  width: 100%;
+  border: 1px solid #E5E5E5;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+form .form-group {
+  margin-top: 1rem;
+}
+
+form .form-checkbox {
+  margin-top: 1rem;
+}
+
+form .form-checkbox label {
+  display: inline;
+}
+
+form .form-button {
+  margin-top: 1rem;
+}
+
+form .form-button button {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3rem;
+  background-color: #0f32729c;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form .form-button button:hover {
+  background-color: #0f3272;
 }

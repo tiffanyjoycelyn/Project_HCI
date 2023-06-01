@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css"/>
-    <link rel="stylesheet" href="../css/registerPage.css"/>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/registerPage.css" />
     <title>HI-TOYZ</title>
 </head>
+
 <body>
     <header>
         <nav class="navigationBar">
@@ -18,7 +20,7 @@
             </div>
             <ul class="navigation">
                 <li><a href="./homePage.html">Home</a></li>
-                <li><a href="./productsPage.html" >Products</a></li>
+                <li><a href="./productsPage.html">Products</a></li>
                 <li><a href="./galleryPage.html">Gallery</a></li>
                 <li><a href="eventPage.html">Events</a></li>
                 <li>
@@ -34,24 +36,69 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div>
 
+    <main>
+        <div class="container">
+            <div class="register-section">
+                <div class="header-register-section">Register Membership</div>
+
+                <form>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label>Full Name:</label>
+                        <input type="text" id="full-name">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <input type="radio" value="male" name="gender" id="maleGender"> Male
+                        <input type="radio" value="female" name="gender" id="femaleGender"> Female
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth:</label>
+                        <input type="date" id="date-of-birth">
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label>Password Confirmation:</label>
+                        <input type="password" id="password-confirmation">
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="agree">
+                        <label>I agree to the terms and condition of Store Del Luna</label>
+                    </div>
+                    <div class="form-button">
+                        <small class="error-message" id="error"></small>
+                        <button id="register-button">Become A Member</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
         <div class="footerBar"">
-            <div class="brandName-footer">
-                <div class="brandName-firstName-footer">hi</div>
-                <div class="brandName-dash-footer">-</div>
-                <div class="brandName-lastName-footer">toyz</div>
-            </div>
-            <div class="footer-item">
-                    Copyright &copy; 2023 | HI-TOYZ by Tiffany Joycelyn
-            </div>
+            <div class=" brandName-footer">
+            <div class="brandName-firstName-footer">hi</div>
+            <div class="brandName-dash-footer">-</div>
+            <div class="brandName-lastName-footer">toyz</div>
+        </div>
+        <div class="footer-item">
+            Copyright &copy; 2023 | HI-TOYZ by Tiffany Joycelyn
+        </div>
         </div>
     </footer>
     <script src="../js/index.js""></script>
+    <script src=" ../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/registerPage.js""></script>
 
 </body>
 </html>

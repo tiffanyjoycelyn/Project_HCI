@@ -63,7 +63,7 @@ nav,
   align-items: center;
 }
 
-.navigation > li {
+.navigation>li {
   display: flex;
   align-content: space-between;
   margin: auto;
@@ -71,7 +71,7 @@ nav,
   list-style-type: none;
 }
 
-.navigation > li > a {
+.navigation>li>a {
   color: #222;
   font-size: 1.3em;
   font-weight: 1000;
@@ -88,7 +88,7 @@ nav,
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.navigation > li > a:hover {
+.navigation>li>a:hover {
   color: #0f3272;
   transition: all 0.3s ease-in-out;
 }
@@ -216,7 +216,7 @@ footer {
     transition: 0.3s;
   }
 
-  .navigation > li {
+  .navigation>li {
     margin: 20px 0;
   }
 
@@ -227,6 +227,7 @@ footer {
   .brandName-footer {
     font-size: 1.3em;
   }
+
   .footer-item {
     font-size: 0.8em;
   }

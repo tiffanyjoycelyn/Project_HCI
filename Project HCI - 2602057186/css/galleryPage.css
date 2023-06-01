@@ -148,8 +148,11 @@ body {
   filter: opacity(70%);
 }
 
-.testimony-card > p {
-  margin-bottom: 4rem;
+.testimony-card>p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
   font-style: italic;
 }
 
@@ -161,7 +164,7 @@ body {
   font-weight: 600;
 }
 
-.testimony-card-user > span {
+.testimony-card-user>span {
   display: block;
   font-weight: 400;
   font-size: 0.8rem;
