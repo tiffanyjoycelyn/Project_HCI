@@ -381,7 +381,7 @@ body {
 
 @media screen and (max-width: 576px) {
   .brandName-hero {
-    font-size: 4em;
+    font-size: 70px;
   }
 
   .slogan-first {
@@ -401,11 +401,14 @@ body {
   }
 
   .current-text {
-    font-size: 14px;
+    font-size: 20px;
+  }
+  .current-text span{
+    font-size: 30px;
   }
 
   .header-history-slider {
-    font-size: 1.5rem;
+    font-size: 30px;
     justify-content: center;
   }
 
@@ -429,7 +432,8 @@ body {
   }
 
   .product-image {
-    width: 50px;
+    width: 100px;
+    object-fit: contain;
   }
 
   .product-data {
